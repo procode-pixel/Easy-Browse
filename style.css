@@ -1,0 +1,188 @@
+/* style.css */
+
+/* الإعدادات الأساسية والخلفية الداكنة */
+body {
+    background-color: #121212; /* خلفية داكنة جداً */
+    color: #e0e0e0; /* لون نص فاتح */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header h1 {
+    color: #4CAF50; /* لون أخضر جذاب */
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #9e9e9e;
+    font-size: 1.1em;
+}
+/* تنسيق الساعة والتاريخ */
+#liveClock {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #4CAF50; /* اللون الأخضر المميز */
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    #liveClock {
+        font-size: 1em;
+    }
+}
+
+/* ------------------- مستطيل البحث ------------------- */
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px auto;
+    max-width: 700px;
+}
+
+#urlInput {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #1e1e1e; /* لون أغمق قليلاً من الخلفية */
+    color: #ffffff;
+    outline: none;
+    transition: all 0.3s;
+}
+
+#urlInput::placeholder {
+    color: #616161;
+}
+
+#urlInput:focus {
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5); /* إضاءة خضراء عند التركيز */
+}
+
+#searchButton {
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#searchButton:hover {
+    background-color: #45a049; /* لون أغمق قليلاً عند التمرير */
+    transform: translateY(-2px); /* تأثير رفع بسيط */
+}
+
+
+/* ------------------- شبكة الأيقونات ------------------- */
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* تصميم متجاوب */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+/* ... (كود CSS السابق) ... */
+
+.platform-card {
+    /* التعديل لكي نعرض الأيقونة والنص فوق بعضهما */
+    display: flex;
+    flex-direction: column; /* عرض عمودي */
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    border-radius: 12px;
+    font-size: 1.1em; /* تصغير الخط قليلاً */
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* تنسيق الأيقونة */
+.platform-card i {
+    font-size: 2.5em; /* حجم كبير للأيقونة */
+    margin-bottom: 5px;
+}
+
+.platform-card:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ألوان المنصات لإضافة الجاذبية */
+.youtube { background: linear-gradient(135deg, #FF0000, #c40000); }
+.facebook { background: linear-gradient(135deg, #1877F2, #0e5dbf); }
+.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); } /* Gradient */
+.tiktok { background: linear-gradient(135deg, #00f2ea, #010101); color: white; } /* الألوان المميزة لتيك توك */
+.x-twitter { background: #000000; border: 2px solid #1da1f2; }
+.chatgpt { background: linear-gradient(135deg, #6aa588, #5a8d71); } /* لون مميز لأدوات الذكاء الاصطناعي */
+.gemini { background: linear-gradient(135deg, #1da1f2, #7B68EE); }
+.gmail { background: linear-gradient(135deg, #DB4437, #C33126); } /* أحمر غوغل */
+.drive { background: linear-gradient(135deg, #4CAF50, #3C8F41); } /* أخضر غوغل */
+.translate { background: linear-gradient(135deg, #4285F4, #366EB7); } /* أزرق غوغل */
+.wikipedia { background: linear-gradient(135deg, #000000, #4A4A4A); border: 2px solid #fff; } /* لون محايد */
+
+footer {
+    padding-top: 20px;
+    color: #616161;
+}
+/* ------------------- التجاوب مع الأجهزة ------------------- */
+@media (max-width: 600px) {
+    /* تغيير تنسيق شبكة البطاقات للهواتف */
+    .platforms-grid {
+        grid-template-columns: repeat(2, 1fr); /* فقط عمودين على الشاشات الصغيرة */
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em; /* تصغير حجم العنوان */
+    }
+
+    #urlInput, #searchButton {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+    
+    /* تصغير حجم البطاقات والأيقونات على الجوال */
+    .platform-card {
+        height: 100px;
+    }
+
+    .platform-card i {
+        font-size: 2em; 
+    }
+}
+/* ------------------- الوضع الفاتح (Light Mode) ------------------- */
+body.light-mode {
+    background-color: #f0f0f0; /* خلفية فاتحة */
+    color: #333333; /* نص داكن */
+}
+
+/* تعديل الخلفية الداكنة للعناصر الداخلية */
+body.light-mode #urlInput {
+    background-color: #ffffff; /* حقل إدخال أبيض */
+    color: #333333;
+    border: 1px solid #ccc;
+    box-shadow: none;
+}
+
+body.light-mode #liveClock {
+    color: #333333; /* لون نص الساعة داكن */
+}
+
+/* تغيير لون زر التبديل عندما يكون الوضع فاتحاً */
+body.light-mode #modeToggle {
+    background-color: #1e1e1e; /* يصبح الزر داكناً ليتناسب مع الخلفية الفاتحة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

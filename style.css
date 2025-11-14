@@ -1,9 +1,7 @@
-/* style.css */
 
-/* الإعدادات الأساسية والخلفية الداكنة */
 body {
-    background-color: #121212; /* خلفية داكنة جداً */
-    color: #e0e0e0; /* لون نص فاتح */
+    background-color: #121212; 
+    color: #e0e0e0; 
     font-family: 'Arial', sans-serif;
     text-align: center;
     padding: 20px;
@@ -12,7 +10,7 @@ body {
 }
 
 header h1 {
-    color: #4CAF50; /* لون أخضر جذاب */
+    color: #4CAF50; 
     font-size: 2.5em;
     margin-bottom: 5px;
 }
@@ -21,11 +19,11 @@ header p {
     color: #9e9e9e;
     font-size: 1.1em;
 }
-/* تنسيق الساعة والتاريخ */
+
 #liveClock {
     font-size: 1.3em;
     font-weight: bold;
-    color: #4CAF50; /* اللون الأخضر المميز */
+    color: #4CAF50; 
     margin-bottom: 20px;
 }
 
@@ -35,7 +33,7 @@ header p {
     }
 }
 
-/* ------------------- مستطيل البحث ------------------- */
+
 .search-container {
     display: flex;
     justify-content: center;
@@ -50,7 +48,7 @@ header p {
     border: none;
     border-radius: 8px;
     font-size: 1em;
-    background-color: #1e1e1e; /* لون أغمق قليلاً من الخلفية */
+    background-color: #1e1e1e;
     color: #ffffff;
     outline: none;
     transition: all 0.3s;
@@ -61,7 +59,7 @@ header p {
 }
 
 #urlInput:focus {
-    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5); /* إضاءة خضراء عند التركيز */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5)
 }
 
 #searchButton {
@@ -76,32 +74,32 @@ header p {
 }
 
 #searchButton:hover {
-    background-color: #45a049; /* لون أغمق قليلاً عند التمرير */
-    transform: translateY(-2px); /* تأثير رفع بسيط */
+    background-color: #45a049; 
+    transform: translateY(-2px);
 }
 
 
-/* ------------------- شبكة الأيقونات ------------------- */
+
 .platforms-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* تصميم متجاوب */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     max-width: 1000px;
     margin: 0 auto 50px auto;
     padding: 0 20px;
 }
 
-/* ... (كود CSS السابق) ... */
+
 
 .platform-card {
-    /* التعديل لكي نعرض الأيقونة والنص فوق بعضهما */
+  
     display: flex;
-    flex-direction: column; /* عرض عمودي */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     height: 120px;
     border-radius: 12px;
-    font-size: 1.1em; /* تصغير الخط قليلاً */
+    font-size: 1.1em;
     font-weight: bold;
     color: white;
     text-decoration: none;
@@ -109,9 +107,9 @@ header p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
-/* تنسيق الأيقونة */
+
 .platform-card i {
-    font-size: 2.5em; /* حجم كبير للأيقونة */
+    font-size: 2.5em; 
     margin-bottom: 5px;
 }
 
@@ -120,7 +118,7 @@ header p {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* ألوان المنصات لإضافة الجاذبية */
+
 .youtube { background: linear-gradient(135deg, #FF0000, #c40000); }
 .facebook { background: linear-gradient(135deg, #1877F2, #0e5dbf); }
 .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); } /* Gradient */
@@ -137,16 +135,16 @@ footer {
     padding-top: 20px;
     color: #616161;
 }
-/* ------------------- التجاوب مع الأجهزة ------------------- */
+
 @media (max-width: 600px) {
-    /* تغيير تنسيق شبكة البطاقات للهواتف */
+    
     .platforms-grid {
-        grid-template-columns: repeat(2, 1fr); /* فقط عمودين على الشاشات الصغيرة */
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
 
     header h1 {
-        font-size: 1.8em; /* تصغير حجم العنوان */
+        font-size: 1.8em;
     }
 
     #urlInput, #searchButton {
@@ -154,7 +152,7 @@ footer {
         font-size: 0.9em;
     }
     
-    /* تصغير حجم البطاقات والأيقونات على الجوال */
+   
     .platform-card {
         height: 100px;
     }
@@ -163,26 +161,27 @@ footer {
         font-size: 2em; 
     }
 }
-/* ------------------- الوضع الفاتح (Light Mode) ------------------- */
+
 body.light-mode {
-    background-color: #f0f0f0; /* خلفية فاتحة */
-    color: #333333; /* نص داكن */
+    background-color: #f0f0f0; 
+    color: #333333;
 }
 
-/* تعديل الخلفية الداكنة للعناصر الداخلية */
+
 body.light-mode #urlInput {
-    background-color: #ffffff; /* حقل إدخال أبيض */
+    background-color: #ffffff; 
     color: #333333;
     border: 1px solid #ccc;
     box-shadow: none;
 }
 
 body.light-mode #liveClock {
-    color: #333333; /* لون نص الساعة داكن */
+    color: #333333;
 }
 
-/* تغيير لون زر التبديل عندما يكون الوضع فاتحاً */
+
 body.light-mode #modeToggle {
-    background-color: #1e1e1e; /* يصبح الزر داكناً ليتناسب مع الخلفية الفاتحة */
+    background-color: #1e1e1e;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }

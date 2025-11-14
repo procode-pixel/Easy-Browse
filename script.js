@@ -71,6 +71,9 @@ setInterval(updateClock, 1000);
 
 
 
+/* -------------------------------------- */
+/* تعديل وظيفة الوضع الداكن/الفاتح */
+/* -------------------------------------- */
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
@@ -103,7 +106,3 @@ themeToggle.addEventListener('click', () => {
 
 // Load the theme when the page loads
 loadTheme();
-
-// تأكد من أن هذه الدالة في النهاية ليتم استدعاؤها
-// Load the theme when the page loads
-// loadTheme(); 

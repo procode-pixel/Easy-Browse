@@ -70,40 +70,40 @@ updateClock();
 setInterval(updateClock, 1000);
 
 
-const toggleButton = document.getElementById('modeToggle');
+
+const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-function switchMode() {
-   
-    body.classList.toggle('light-mode');
-    
-  
-    if (body.classList.contains('light-mode')) {
-       
-        toggleButton.innerHTML = '<i class="fas fa-moon"></i>';
-        localStorage.setItem('mode', 'light');
+// Check stored theme preference or default to light
+function loadTheme() {
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    body.classList.toggle('dark-mode', currentTheme === 'dark');
+    updateToggleIcon(currentTheme);
+}
+
+// Update the button icon based on the current theme
+function updateToggleIcon(currentTheme) {
+    const iconSpan = themeToggle.querySelector('.icon');
+    if (currentTheme === 'dark') {
+        iconSpan.textContent = '🌙'; // قمر للوضع الداكن
+        iconSpan.setAttribute('aria-label', 'Light Mode');
     } else {
-        // 
-        toggleButton.innerHTML = '<i class="fas fa-sun"></i>';
-        localStorage.setItem('mode', 'dark');
+        iconSpan.textContent = '☀️'; // شمس للوضع الفاتح
+        iconSpan.setAttribute('aria-label', 'Dark Mode');
     }
 }
 
-
-toggleButton.addEventListener('click', switchMode);
-
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    const savedMode = localStorage.getItem('mode');
-    
-  
-    if (savedMode === 'light') {
-       
-        switchMode(); 
-    } 
-  
-    else if (savedMode === 'dark') {
-         toggleButton.innerHTML = '<i class="fas fa-sun"></i>';
-    }
-
+// Toggle theme on button click
+themeToggle.addEventListener('click', () => {
+    const isDarkMode = body.classList.toggle('dark-mode');
+    const newTheme = isDarkMode ? 'dark' : 'light';
+    localStorage.setItem('theme', newTheme);
+    updateToggleIcon(newTheme);
 });
+
+// Load the theme when the page loads
+loadTheme();
+
+// تأكد من أن هذه الدالة في النهاية ليتم استدعاؤها
+// Load the theme when the page loads
+// loadTheme(); 

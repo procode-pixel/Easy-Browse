@@ -1,3 +1,13 @@
+:root {
+ 
+    
+    --light-button-bg: #4a90e2; 
+    --light-button-hover: #3a7bc8;
+    
+    --dark-button-bg: #6c757d;  
+    --dark-button-hover: #5a6268;
+    
+   
 
 body {
     background-color: #121212; 
@@ -162,26 +172,32 @@ footer {
     }
 }
 
-body.light-mode {
-    background-color: #f0f0f0; 
-    color: #333333;
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 50%; /* جعله دائريًا */
+    width: 45px; /* حجم كبير نسبيًا */
+    height: 45px;
+    cursor: pointer;
+    font-size: 1.2em;
+    box-shadow: var(--shadow-color);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    z-index: 1000;
 }
 
-
-body.light-mode #urlInput {
-    background-color: #ffffff; 
-    color: #333333;
-    border: 1px solid #ccc;
-    box-shadow: none;
+.theme-toggle:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
 }
 
-body.light-mode #liveClock {
-    color: #333333;
+body.dark-mode .theme-toggle {
+    background-color: #f1c40f; /* لون ذهبي/أصفر لزر الوضع الداكن */
 }
 
-
-body.light-mode #modeToggle {
-    background-color: #1e1e1e;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+body.dark-mode .theme-toggle:hover {
+    background-color: #e6b800; 
 }

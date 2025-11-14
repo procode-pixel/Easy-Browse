@@ -194,6 +194,14 @@ footer {
     transform: scale(1.05);
 }
 
+body.dark-mode {
+    
+    --main-color: var(--dark-bg-color);
+    --text-color: var(--dark-text-color);
+    
+}
+
+
 body.dark-mode .theme-toggle {
     background-color: #f1c40f; 
 }

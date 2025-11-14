@@ -88,10 +88,10 @@ function loadTheme() {
 function updateToggleIcon(currentTheme) {
     const iconSpan = themeToggle.querySelector('.icon');
     if (currentTheme === 'dark') {
-        iconSpan.textContent = '🌙'; // قمر للوضع الداكن
+        iconSpan.textContent = '☀️'; // قمر للوضع الداكن
         iconSpan.setAttribute('aria-label', 'Light Mode');
     } else {
-        iconSpan.textContent = '☀️'; // شمس للوضع الفاتح
+        iconSpan.textContent = '🌙'; // شمس للوضع الفاتح
         iconSpan.setAttribute('aria-label', 'Dark Mode');
     }
 }

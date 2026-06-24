@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-adsense-account" content="ca-pub-6746628862967824">
     <meta name="google-site-verification" content="google-site-verification=LvaZXEJd_zZaXQk9q7YE8ZRa4TsMyntTgpNMR9dY0Fs"/>
-    <title>Doser Hub | بوابة الوصول السريع</title>
-    <meta name="description" content="مركز Doser الموحد للوصول السريع لجميع المنصات وأدوات الذكاء الاصطناعي المفضلة لديك. || "مركز Doser الموحد للإنتاجية والوصول السريع. ابدأ يومك بضغطة زر؛ جميع منصات التواصل (يوتيوب، تيك توك، X) وأدوات الذكاء الاصطناعي (ChatGPT, Gemini) والخدمات الأساسية في مكان واحد. تصفح بذكاء!"">
+    <title>Doser Hub | بوابتك للوصول السريع</title>
+    <meta name="description" content="Doser Hub - مركزك الموحد للوصول السريع لجميع المنصات وأدوات الذكاء الاصطناعي والإنتاجية. تصفح بذكاء وسرعة.">
     <link rel="icon" sizes="any" href="ICON.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6746628862967824"
@@ -22,82 +21,40 @@
 
 
     <header>
-        <h1>مرحباً بك في مركز Doser السريع</h1>
-        <p>انطلق إلى منصاتك وأدواتك المفضلة بضغطة زر واحدة!</p>
+        <h1>Doser Hub</h1>
+        <p>بوابتك الذكية للوصول السريع لكل ما تحتاجه</p>
         <div id="liveClock"></div>
     </header>
 
     <main>
         <div class="search-container">
-            <input type="text" id="urlInput" placeholder="اكتب عنوان الموقع (مثال: google.com) أو اسم الموقع" dir="ltr">
+            <input type="text" id="urlInput" placeholder="ابحث في جوجل أو اكتب رابط الموقع مباشرة..." dir="rtl">
             <button id="searchButton">انطلق</button>
         </div>
         
-        <div class="platforms-grid">
-    
-            <a href="https://www.youtube.com" target="_blank" class="platform-card youtube">
-                <i class="fab fa-youtube"></i> <span>يوتيوب</span>
-            </a>
-            
-            <a href="https://www.facebook.com" target="_blank" class="platform-card facebook">
-                <i class="fab fa-facebook-f"></i> <span>فيسبوك</span>
-            </a>
-            
-            <a href="https://www.instagram.com" target="_blank" class="platform-card instagram">
-                <i class="fab fa-instagram"></i> <span>إنستاجرام</span>
-            </a>
-            
-            <a href="https://www.tiktok.com" target="_blank" class="platform-card tiktok">
-                <i class="fab fa-tiktok"></i> <span>تيك توك</span>
-            </a>
-            
-            <a href="https://x.com" target="_blank" class="platform-card x-twitter">
-                <i class="fab fa-twitter"></i> <span>X (تويتر)</span>
-            </a>
-            
-            <a href="https://chat.openai.com" target="_blank" class="platform-card chatgpt">
-                <i class="fas fa-robot"></i> <span>ChatGPT</span>
-            </a>
-            
-            <a href="https://gemini.google.com" target="_blank" class="platform-card gemini">
-                <i class="fas fa-brain"></i> <span>جيميناي</span>
-            </a>
-            <a href="https://mail.google.com/" target="_blank" class="platform-card gmail">
-                <i class="fas fa-envelope"></i> <span>بريد Gmail</span>
-            </a>
-            <a href="https://drive.google.com/" target="_blank" class="platform-card drive">
-                <i class="fab fa-google-drive"></i> <span>Google Drive</span>
-            </a>
-            <a href="https://translate.google.com/" target="_blank" class="platform-card translate">
-                <i class="fas fa-language"></i> <span>ترجمة جوجل</span>
-            </a>
-            <a href="https://www.wikipedia.org/" target="_blank" class="platform-card wikipedia">
-                <i class="fab fa-wikipedia-w"></i> <span>ويكيبيديا</span>
-            </a>
+        <div id="platforms-grid" class="platforms-grid">
+            <!-- سيتم تحميل المواقع ديناميكياً من Firebase -->
+            <div class="loading-spinner">جاري تحميل المواقع...</div>
         </div>
     </main>
 
     <footer>
-        <p>جميع الحقوق محفوظة © 2025 Doser</p>
-        <p>تم التصميم والنشر:Abdelrahman Elsayed</p> 
-        <footer class="contact-section">
-    <h3>تواصل معنا</h3>
-    <div class="contact-buttons">
-        <a href="https://wa.me/201151071517" target="_blank" class="contact-button whatsapp-button">
-            <i class="fab fa-whatsapp"></i> Whatsapp Me
-        </a>
-        <a href="mailto:doserhubsite@gmail.com" class="contact-button email-button">
-            <i class="fas fa-envelope"></i> Send me an email 
-        </a>
-    </div>
-</footer>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-        
-        </footer>
+        <div class="contact-section">
+            <h3>تواصل معنا</h3>
+            <div class="contact-buttons">
+                <a href="https://wa.me/201151071517" target="_blank" class="contact-button whatsapp-button">
+                    <i class="fab fa-whatsapp"></i> واتساب
+                </a>
+                <a href="mailto:doserhubsite@gmail.com" class="contact-button email-button">
+                    <i class="fas fa-envelope"></i> البريد الإلكتروني
+                </a>
+            </div>
+        </div>
+        <p class="footer-rights">جميع الحقوق محفوظة © 2025 Doser</p>
+        <p class="footer-rights">تم التصميم والتطوير بواسطة: Abdelrahman Elsayed</p> 
+    </footer>
     
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>
